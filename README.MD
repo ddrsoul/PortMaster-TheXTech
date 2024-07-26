@@ -1,0 +1,61 @@
+## WHAT IS THEXTECH ?
+
+This is a direct continuation of the SMBX 1.3 engine. Originally it was written in VB6 for Windows, and later, it got ported/rewritten into C++ and became a cross-platform engine. 
+It completely reproduces the old SMBX 1.3 engine (aside from its Editor), includes many of its logical bugs (critical bugs that lead the game to crash or freeze got fixed), and also adds a lot of new updates and features.
+
+This build is packed to be compatible with linux based handhelds that support Portmaster project (https://portmaster.games/)
+Thanks to Portmaster Community and @ds-sloth developer who supported me.
+
+
+## HOW TO BUILD
+
+For better compatibility TheXTech was build in Ubuntu 20.04 arm64 chroot.
+
+```
+git clone --recurse-submodules https://github.com/TheXTech/TheXTech.git
+```
+
+then edit CMakeLists.txt (or else it will not build inside such old environment) and add line:
+```
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+```
+then we start to build:
+```
+mkdir build
+cd ./build
+cmake -DCMAKE_BUILD_TYPE=MinSizeRel -DUSE_SYSTEM_SDL2=ON ..
+make
+```
+
+
+## HOW TO RUN
+
+package contains only open source engine, for gaming you need assets (sprites, music and etc.), you can find them at the original github project https://github.com/TheXTech/TheXTech
+add assets into
+```
+./thextech/assets/assets_name_folder
+```
+after first launch game will create
+```
+./thextech/worlds/asset_name
+```
+folder, where you can add your own episodes to play
+
+
+## CONTROLS
+Game uses GameController API for all inputs exept cursor movement. Cursor is mapped to right analog stick with the help of gptokeyb tool.
+R2 is left button mouse click
+L2 is right button mouse click
+
+
+## PERFORMANCE FIX
+
+If your title screen is lagging because of many characters running at the same time, you can add
+```
+[intro]
+enable-activity=true
+max-players-count=2
+```
+inside 
+```
+./thextech/assets/assets_name_folder/gameinfo.ini
