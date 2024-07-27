@@ -4,7 +4,8 @@ This is a direct continuation of the SMBX 1.3 engine. Originally it was written 
 It completely reproduces the old SMBX 1.3 engine (aside from its Editor), includes many of its logical bugs (critical bugs that lead the game to crash or freeze got fixed), and also adds a lot of new updates and features.
 
 This build is packed to be compatible with linux based handhelds that support Portmaster project (https://portmaster.games/)
-Thanks to Portmaster Community and @ds-sloth developer who supported me.
+
+Thanks to TheXTech project, Portmaster Community and @ds-sloth developer who supported me.
 
 
 ## HOW TO BUILD
@@ -30,7 +31,7 @@ make
 
 ## HOW TO RUN
 
-package contains only open source engine, for gaming you need assets (sprites, music and etc.), you can find them at the original github project https://github.com/TheXTech/TheXTech
+Package contains only open source engine, for gaming you need assets (sprites, music and etc.), you can find them at the original github project https://github.com/TheXTech/TheXTech
 add assets into
 ```
 ./thextech/assets/assets_name_folder
@@ -43,9 +44,16 @@ folder, where you can add your own episodes to play
 
 
 ## CONTROLS
+
 Game uses GameController API for all inputs exept cursor movement. Cursor is mapped to right analog stick with the help of gptokeyb tool.
+
 R2 is left button mouse click
+
 L2 is right button mouse click
+
+Еo avoid problems with simultaneous cursor control from a gamepad and mouse, go to the OPTIONS -> CONTROLS -> Gamepad (In Use) -> Chose your gamepad -> Cursor controls
+
+and remove any mappings to real buttons.
 
 
 ## PERFORMANCE FIX
