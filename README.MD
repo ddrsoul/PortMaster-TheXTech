@@ -51,7 +51,7 @@ R2 is left button mouse click
 
 L2 is right button mouse click
 
-Еo avoid problems with simultaneous cursor control from a gamepad and mouse, go to the OPTIONS -> CONTROLS -> Gamepad (In Use) -> Chose your gamepad -> Cursor controls
+To avoid problems with simultaneous cursor control from a gamepad and mouse, go to the OPTIONS -> CONTROLS -> Gamepad (In Use) -> Chose your gamepad -> Cursor controls
 
 and remove any mappings to real buttons.
 
