@@ -63,6 +63,8 @@ max-players-count=2
 inside 
 ```
 ./thextech/assets/assets_name_folder/gameinfo.ini
+```
+
 
 ## ROCKNIX Powkiddy X55 gamepad fix
 
