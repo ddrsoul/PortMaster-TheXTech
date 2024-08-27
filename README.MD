@@ -42,13 +42,14 @@ folder, where you can add your own episodes to play
 
 ## CONTROLS
 
-Game uses GameController API for all inputs exept cursor movement.   
+Game uses GameController API for all inputs exept cursor movement.  
 Adjust controls in OPTIONS - > CONTROLS -> GAMEPAD  
 Cursor is mapped to right analog stick with the help of gptokeyb tool.  
 R2 is left button mouse click  
 L2 is right button mouse click  
 
-To avoid problems with simultaneous cursor control from a gamepad and mouse, go to the OPTIONS -> CONTROLS -> Gamepad (In Use) -> Chose your gamepad -> Cursor controls  
+To avoid problems with simultaneous cursor control from a gamepad and mouse, go to the  
+OPTIONS -> CONTROLS -> Gamepad (In Use) -> Chose your gamepad -> Cursor controls  
 and remove any mappings to real buttons.
 
 
