@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-export XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
+XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
 
 if [ -d "/opt/system/Tools/PortMaster/" ]; then
   controlfolder="/opt/system/Tools/PortMaster"
@@ -34,4 +34,4 @@ $GPTOKEYB "thextech" -c "$GAMEDIR/thextech.gptk" &
 ./thextech  2>&1 | tee -a ./log.txt
 $ESUDO kill -9 $(pidof gptokeyb)
 $ESUDO systemctl restart oga_events &
-printf "\033c" >> /dev/tty1
+printf "\033c" >> /dev/tty0
