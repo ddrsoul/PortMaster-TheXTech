@@ -14,11 +14,9 @@ else
 fi
 
 source $controlfolder/control.txt
+source $controlfolder/device_info.txt
 
 get_controls
-
-$ESUDO chmod 666 /dev/tty1
-$ESUDO chmod 666 /dev/uinput
 
 GAMEDIR=/$directory/ports/thextech
 
@@ -26,6 +24,9 @@ export TEXTINPUTINTERACTIVE="Y"
 export TEXTINPUTNOAUTOCAPITALS="Y"
 
 export LD_LIBRARY_PATH="$GAMEDIR/libs":LD_LIBRARY_PATH
+export SDL_GAMECONTROLLERCONFIG="$sdl_controllerconfig"
+
+$ESUDO chmod 666 /dev/uinput
 
 cd $GAMEDIR/
 
