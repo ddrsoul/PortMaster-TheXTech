@@ -30,8 +30,11 @@ $ESUDO chmod 666 /dev/uinput
 
 cd $GAMEDIR/
 
-
-$GPTOKEYB "thextech" -c "$GAMEDIR/thextech.gptk" &
+if [${DEVICE_NAME} == "X55" && ${CFW_NAME} == "ROCKNIX"]; then
+  $GPTOKEYB "thextech" xbox360 &
+else
+  $GPTOKEYB "thextech" -c "$GAMEDIR/thextech.gptk" &
+fi
 ./thextech  2>&1 | tee -a ./log.txt
 $ESUDO kill -9 $(pidof gptokeyb)
 $ESUDO systemctl restart oga_events &
